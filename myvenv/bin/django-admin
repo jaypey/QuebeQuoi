@@ -1,5 +1,4 @@
-#!/home/jp/Documents/QuebeQuoi/myvenv/bin/python3
-
+#!/home/jp/Documents/QuebeQuoi/myvenv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
