@@ -1,3 +1,42 @@
 .content{
     margin: 25px;
 }
+input#searchbar.rounded{
+    width: 600px;
+    height: 50px;
+    font-size: 35px;
+    text-align: center;
+    border-width: 0px 0px 0.2rem 0px;
+    
+}
+input:focus{
+    border-color: rgba(39, 39, 194, 0.61);
+}
+#search.btn{
+    background-color: rgb(39, 39, 194);
+    color: rgba(255, 255, 255, 0.884);
+}
+.vertical-center {
+    height:80%;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0);
+
+    text-align: center;  /* align the inline(-block) elements horizontally */
+    font: 0/0 a;         /* remove the gap between inline(-block) elements */
+  }
+  
+  .vertical-center:before {    /* create a full-height inline block pseudo=element */
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;    /* vertical alignment of the inline element */
+    height: 80%;
+  }
+  
+  .vertical-center > .container {
+    max-width: 100%;
+  
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+                             /* reset the font property */
+    font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
