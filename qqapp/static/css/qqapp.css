@@ -18,7 +18,7 @@ input:focus{
   color: rgba(255, 255, 255, 0.884);
 }
 .vertical-center {
-  height:80%;
+  height:20%;
   width:100%;
   background-color: rgba(0, 0, 0, 0);
 
@@ -30,7 +30,7 @@ input:focus{
   content: " ";
   display: inline-block;
   vertical-align: middle;    /* vertical alignment of the inline element */
-  height: 80%;
+  height: 20%;
 }
 
 .vertical-center > .container {
@@ -40,4 +40,10 @@ input:focus{
   vertical-align: middle;  /* vertical alignment of the inline element */
                            /* reset the font property */
   font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.subtitle{
+  border-bottom-style: solid;
+  border-radius: 10px;
+  border-bottom-width: 3px;
+  border-color: #dcdde1;
 }

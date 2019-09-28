@@ -1,0 +1,17 @@
+{% extends 'qqapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    {% for qq in qqsearch %}
+          <div style="width: 20rem">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h2>{{ qq.qqname }}</h2>
+                  <p class="card-text">{{ qq.qq_desc}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>  
+            </div>
+    {% endfor %}
+{% endblock %}
