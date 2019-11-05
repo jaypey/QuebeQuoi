@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <h2>{{ qq.qqname }}</h2>
                   <p class="card-text">{{ qq.qq_desc}}</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <a href="{% url 'qqdetail' pk=qq.pk %}" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>  
             </div>

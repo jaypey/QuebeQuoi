@@ -1,0 +1,11 @@
+{% extends 'qqapp/base.html' %}
+
+{% block content %}
+    <div>
+            <div>
+                {{ qq.qq_date }}
+            </div>
+        <h2>{{ qq.qqname }}</h2>
+        <p>{{ qq.qq_desc|linebreaksbr }}</p>
+    </div>
+{% endblock %}
