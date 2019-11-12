@@ -11,41 +11,25 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="{% static 'assets/QQlogo.png'%}" width="100" height="60"></img></a>
+        <a class="navbar-brand" href="/"><img src="{% static 'assets/QQlogo.png'%}" width="100" height="60"></img></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Recherche <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Qu'est-ce que Quebequoi?</a>
+                {% block nav-home%}<a class="nav-item nav-link" href="{% url 'home' %}">Recherche <span class="sr-only">(current)</span></a>{% endblock %}
+                {% block nav-about%}<a class="nav-item nav-link" href="{% url 'about' %}">Qu'est-ce que Québequoi?</a>{% endblock %}
                 <a class="nav-item nav-link" href="#">Contribuer</a>
             </div>
         </div>
     </nav>
     <div class="content">
-        <div class="jumbotron vertical-center">
-            <div class="container">
-                <div class="d-flex justify-content-center">
-                    <form id="searchform" action="/search/" method="get" accept-charset="utf-8">
-                        <input class="rounded" id="searchbar" name="q" type="text" placeholder="Search">
-                        <div style="padding-top: 10px;">
-                            <div class="d-flex justify-content-center">
-                                <button id="search" type="submit" class="btn">Search<i class="angle-double-right"></i></button>
-                            </div>
-                        </div>
-                      </form>
-                </div>
-                
-            </div>
-        </div>
-        <div>
-            <div class="subtitle">
-                <h2>Dernieres entreprises</h2>
-            </div>
-            <br>
-            <div style="display: inline-flex;">
+            {% block searchbar %}
+            {% endblock %}
+            {% block subtitle %}
+            {% endblock %}
+            <div>
                 {% block content %}
                 {% endblock %}
             </div>

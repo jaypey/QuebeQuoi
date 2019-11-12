@@ -2,8 +2,47 @@
 {% extends 'qqapp/base.html' %}
 {% load static %}
 
+{% block nav-home %}<a class="nav-item nav-link active">Recherche <span class="sr-only">(current)</span></a>{% endblock %}
+
+{% block searchbar %}
+        <div class="jumbotron vertical-center">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <form id="searchform" action="/search/" method="get" accept-charset="utf-8">
+                        <input class="rounded" id="searchbar" name="q" type="text" placeholder="Search">
+                        <div style="padding-top: 10px;">
+                            <div class="d-flex justify-content-center">
+                                <button id="search" type="submit" class="btn">Search<i class="angle-double-right"></i></button>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+                
+            </div>
+        </div>
+        {% endblock %}
+        {% block subtitle %}
+        <div>
+            <div class="subtitle">
+                <h2>Dernières entreprises</h2>
+            </div>
+            <br>
+        {% endblock %}
 {% block content %}
-    {% for qq in qqs %}
-            <h2>{{ qq.qqname }}</h2>  
-    {% endfor %}
+    <section class="cards">
+        {% for qq in qqs %}
+            <div>
+                    <div class="card">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h2>{{ qq.qqname }}</h2>
+                            <p class="card-text">{{ qq.qq_desc}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="{% url 'qqdetail' pk=qq.pk %}" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>  
+                    </div> 
+        {% endfor %}
+    </section>
 {% endblock %}
