@@ -21,6 +21,10 @@
                 {% block nav-home%}<a class="nav-item nav-link" href="{% url 'home' %}">Recherche <span class="sr-only">(current)</span></a>{% endblock %}
                 {% block nav-about%}<a class="nav-item nav-link" href="{% url 'about' %}">Qu'est-ce que Québequoi?</a>{% endblock %}
                 <a class="nav-item nav-link" href="#">Contribuer</a>
+                
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link ml-auto" href="{% url 'login' %}">Se connecter</a>
             </div>
         </div>
     </nav>

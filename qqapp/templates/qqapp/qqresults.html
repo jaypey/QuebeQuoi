@@ -6,10 +6,10 @@
             <div class="container">
                 <div class="d-flex justify-content-center">
                     <form id="searchform" action="/search/" method="get" accept-charset="utf-8">
-                        <input class="rounded" id="searchbar" name="q" type="text" placeholder="Search">
+                        <input class="rounded" id="searchbar" name="q" type="text" placeholder="Taper le nom d'une entreprise">
                         <div style="padding-top: 10px;">
                             <div class="d-flex justify-content-center">
-                                <button id="search" type="submit" class="btn">Search<i class="angle-double-right"></i></button>
+                                <button id="search" type="submit" class="btn">Rechercher<i class="angle-double-right"></i></button>
                             </div>
                         </div>
                       </form>
@@ -21,7 +21,7 @@
         {% block subtitle %}
         <div>
             <div class="subtitle">
-                <h2>Dernieres entreprises</h2>
+                <h2>Dernières entreprises</h2>
             </div>
             <br>
         {% endblock %}
@@ -36,7 +36,7 @@
                     <p class="card-text">{{ qq.qq_desc}}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="{% url 'qqdetail' pk=qq.pk %}" class="btn btn-primary">Go somewhere</a>
+                    <a href="{% url 'qqdetail' pk=qq.pk %}" class="btn btn-primary">Plus de détails</a>
                 </div>
             </div>  
             </div> 
