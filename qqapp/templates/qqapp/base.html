@@ -20,11 +20,17 @@
             <div class="navbar-nav">
                 {% block nav-home%}<a class="nav-item nav-link" href="{% url 'home' %}">Recherche <span class="sr-only">(current)</span></a>{% endblock %}
                 {% block nav-about%}<a class="nav-item nav-link" href="{% url 'about' %}">Qu'est-ce que Québequoi?</a>{% endblock %}
-                <a class="nav-item nav-link" href="#">Contribuer</a>
+                {% if user.is_authenticated %}
+                    <a class="nav-item nav-link" href="#">Contribuer</a>
+                {% endif %}
                 
             </div>
-            <div class="navbar-nav ml-auto">
+            <div style="padding-right: 50px;" class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                <p>Connecté en tant que {{ user.username }}<br/><a href="accounts/logout">Déconnexion</a></p>
+                {% else %}
                 <a class="nav-item nav-link ml-auto" href="{% url 'login' %}">Se connecter</a>
+                {% endif %}
             </div>
         </div>
     </nav>
