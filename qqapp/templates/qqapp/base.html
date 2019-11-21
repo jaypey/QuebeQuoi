@@ -27,7 +27,7 @@
             </div>
             <div style="padding-right: 50px;" class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                <p>Connecté en tant que {{ user.username }}<br/><a href="accounts/logout">Déconnexion</a></p>
+                <p>Connecté en tant que {{ user.username }}<br/><a href="{% url 'logout' %}">Déconnexion</a></p>
                 {% else %}
                 <a class="nav-item nav-link ml-auto" href="{% url 'login' %}">Se connecter</a>
                 {% endif %}
