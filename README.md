@@ -4,7 +4,7 @@ projet se veut être une version web de l'affichage physique sur emballage Alime
 répertoire de produits et d'entreprises québécoises.
 
 ## Fonctionnalités
-Présentement le site est un "Work in Progress", les fonctionnalités de base tel que le système de connexion, l'ajout d'entreprises et la recherche par le nom sont
+Le site a été créer en utilisant le framework web [Django](https://www.djangoproject.com/) en Python. Présentement le site est un "Work in Progress", les fonctionnalités de base tel que le système de connexion, l'ajout d'entreprises et la recherche par le nom sont
 implémentés, mais manque de polissage. Il en est de même pour le Front-end(l'aspect visuel de la page): il manque d'amour.
 
 <img src="https://raw.githubusercontent.com/jaypey/QuebeQuoi/master/screenshotqc.png" alt="screenshot" width="500" height="300"/>
